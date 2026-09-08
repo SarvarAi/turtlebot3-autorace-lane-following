@@ -133,6 +133,16 @@ docs/
 
 ---
 
+## Documentation
+
+| Document | Contents |
+|---|---|
+| **[ARCHITECTURE.md](docs/ARCHITECTURE.md)** | The full pipeline stage by stage, the mission state machine, and the concrete failure case behind each design decision |
+| **[TUNING.md](docs/TUNING.md)** | Every parameter in the node, why it holds that value, and what to re-tune first for a different track |
+| **[CALIBRATION.md](docs/CALIBRATION.md)** | Camera pose, and three bugs found in the stock ROBOTIS calibration pipeline — including one that produced plausible but wrong results |
+
+---
+
 ## Running it
 
 **Prerequisites:** ROS Noetic on Ubuntu 20.04, a built TurtleBot3 workspace, and the

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>lane_follower</name>
+  <version>1.0.0</version>
+  <description>
+    Vision-based autonomous lane following for TurtleBot3 Burger. Tracks yellow
+    lane boundaries and dashed white highway markings with HSV segmentation and
+    connected-component analysis, steers with a PD controller, and drives a
+    seven-state mission machine through a T-junction turn to a red parking square.
+  </description>
+
+  <maintainer email="sarvarislamov001@gmail.com">Sarvar Islamov</maintainer>
+  <license>MIT</license>
+  <url type="repository">https://github.com/sarvarislamov/turtlebot3-autorace-lane-following</url>
+
+  <author>Sarvar Islamov</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>python3-opencv</exec_depend>
+  <exec_depend>python3-numpy</exec_depend>
+
+  <export/>
+</package>

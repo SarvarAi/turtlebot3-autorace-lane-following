@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+  Launches the lane-following driver on the PC (not on the robot).
+
+  Expects the TurtleBot3 bringup and the Raspberry Pi camera publisher to be
+  running already, and an X display to be available for the OpenCV debug
+  windows. Press Q in any window to stop the robot and exit.
+
+  Example:
+    roslaunch lane_follower lane_follower.launch image:=/camera/rgb/image_raw
+-->
+<launch>
+
+  <!-- Camera topic published by turtlebot3_autorace_camera on the robot -->
+  <arg name="image"   default="/camera/rgb/image_raw"/>
+
+  <!-- Velocity topic consumed by turtlebot3_bringup -->
+  <arg name="cmd_vel" default="/cmd_vel"/>
+
+  <node pkg="lane_follower" type="lane_follower.py" name="lane_driver"
+        output="screen" required="true">
+    <remap from="/camera/rgb/image_raw" to="$(arg image)"/>
+    <remap from="/cmd_vel"              to="$(arg cmd_vel)"/>
+  </node>
+
+</launch>

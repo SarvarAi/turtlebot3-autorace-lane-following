@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" width="760" height="560" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8b949e"/>
+    </marker>
+  </defs>
+
+  <g stroke="#8b949e" stroke-width="2" fill="none" marker-end="url(#p)">
+    <path d="M225,58 L225,86"/>
+    <path d="M225,140 L225,168"/>
+    <path d="M225,222 L225,250"/>
+    <path d="M225,304 L225,332"/>
+    <path d="M225,386 L225,414"/>
+    <path d="M225,468 L225,496"/>
+  </g>
+
+  <g text-anchor="middle" font-size="14" font-weight="600">
+    <rect x="90" y="22" width="270" height="36" rx="18" fill="#1F6FEB"/>
+    <text x="225" y="45" fill="#ffffff" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13">/camera/rgb/image_raw</text>
+
+    <rect x="90" y="86" width="270" height="54" rx="8" fill="#30363D"/>
+    <text x="225" y="118" fill="#ffffff">HSV segmentation</text>
+
+    <rect x="90" y="168" width="270" height="54" rx="8" fill="#30363D"/>
+    <text x="225" y="200" fill="#ffffff">ROI crop — bottom 45%</text>
+
+    <rect x="90" y="250" width="270" height="54" rx="8" fill="#30363D"/>
+    <text x="225" y="282" fill="#ffffff">Connected components</text>
+
+    <rect x="90" y="332" width="270" height="54" rx="8" fill="#30363D"/>
+    <text x="225" y="364" fill="#ffffff">Target estimation</text>
+
+    <rect x="90" y="414" width="270" height="54" rx="8" fill="#30363D"/>
+    <text x="225" y="446" fill="#ffffff">PD controller</text>
+
+    <rect x="90" y="496" width="270" height="36" rx="18" fill="#238636"/>
+    <text x="225" y="519" fill="#ffffff" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13">/cmd_vel</text>
+  </g>
+
+  <g font-size="12.5" fill="#8b949e">
+    <text x="392" y="107">yellow · white · red masks</text>
+    <text x="392" y="125">morphological open → close</text>
+
+    <text x="392" y="190">discards horizon and</text>
+    <text x="392" y="208">perspective-crushed markings</text>
+
+    <text x="392" y="272">paired lines · dash clusters ·</text>
+    <text x="392" y="290">largest red blob</text>
+
+    <text x="392" y="354">4-frame moving average</text>
+    <text x="392" y="372">on the steering target</text>
+
+    <text x="392" y="436">error smoothed over 3 frames;</text>
+    <text x="392" y="454">velocity scales down with error</text>
+  </g>
+
+  <text x="90" y="552" font-size="12" fill="#8b949e">One frame, 20 Hz. Red is searched full-frame; yellow and white use the ROI.</text>
+</svg>

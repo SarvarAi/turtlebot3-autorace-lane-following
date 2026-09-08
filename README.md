@@ -49,27 +49,7 @@ Each of these is documented with the failing case and the fix in
 
 ## Pipeline
 
-```
-/camera/rgb/image_raw
-        │
-        ▼
-  HSV segmentation ──────► yellow mask · white mask · red mask
-        │                        (morphological open → close)
-        ▼
-  ROI crop (bottom 45%)
-        │
-        ▼
-  Connected components ──► lane lines · dash clusters · red square
-        │
-        ▼
-  Target estimation ─────► smoothed over 4 frames
-        │
-        ▼
-  PD controller ─────────► error smoothed over 3 frames
-        │
-        ▼
-  Mission state machine ─► /cmd_vel
-```
+![Vision pipeline](docs/images/pipeline.svg)
 
 Connected-component analysis replaced Hough line detection because it stayed stable
 through curves and partial lane visibility, where Hough did not.
@@ -86,12 +66,7 @@ linear = MAX_SPEED - (MAX_SPEED - MIN_SPEED) * speed_factor
 
 ## Mission state machine
 
-```
-LANE_YELLOW ──► LANE_WHITE ──► TURN_LEFT ──► SEEK_RED ──► PARK ──► FINAL_PUSH ──► DONE
-     ▲              │
-     └──────────────┘
-      hysteresis, 8-frame lock
-```
+![Mission state machine](docs/images/state_machine.svg)
 
 | State | Behavior |
 |---|---|

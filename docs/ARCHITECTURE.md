@@ -176,9 +176,7 @@ Straight sections run at the full 0.10 m/s.
 
 ## Stage 6 — Mission state machine
 
-```
-LANE_YELLOW ⇄ LANE_WHITE ──► TURN_LEFT ──► SEEK_RED ──► PARK ──► FINAL_PUSH ──► DONE
-```
+![Mission state machine](images/state_machine.svg)
 
 ### Yellow ⇄ white arbitration
 

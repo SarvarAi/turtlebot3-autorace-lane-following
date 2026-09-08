@@ -128,7 +128,8 @@ catkin_ws/src/lane_follower/
 docs/
 ├── ARCHITECTURE.md              # pipeline, state machine, failure cases
 ├── TUNING.md                    # every parameter and why it has that value
-└── CALIBRATION.md               # three bugs found in the stock ROBOTIS pipeline
+├── CALIBRATION.md               # three bugs found in the stock ROBOTIS pipeline
+└── REPORT.pdf                   # original capstone report as submitted
 ```
 
 ---
@@ -140,6 +141,7 @@ docs/
 | **[ARCHITECTURE.md](docs/ARCHITECTURE.md)** | The full pipeline stage by stage, the mission state machine, and the concrete failure case behind each design decision |
 | **[TUNING.md](docs/TUNING.md)** | Every parameter in the node, why it holds that value, and what to re-tune first for a different track |
 | **[CALIBRATION.md](docs/CALIBRATION.md)** | Camera pose, and three bugs found in the stock ROBOTIS calibration pipeline — including one that produced plausible but wrong results |
+| **[REPORT.pdf](docs/REPORT.pdf)** | The original capstone report submitted for assessment, May 2026 |
 
 ---
 
